@@ -1,5 +1,5 @@
 # react-native-table
 
-## Instalation
+## Installation
 
     npm install @indec/react-native-table
