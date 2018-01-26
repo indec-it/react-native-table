@@ -9,9 +9,9 @@
     "precommit": "npm test",
     "commitmsg": "commitlint -e"
   },
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^6.0.1",
+    "@indec/react-native-commons": "^0.1.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
     "babel-plugin-lodash": "^3.2.11",
@@ -22,9 +22,11 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "husky": "^0.14.3",
+    "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-native": "^0.52.0"
+    "react-native": "^0.52.0",
+    "react-native-elements": "^0.18.5"
   },
   "peerDependencies": {
     "lodash": "^4.17.0",
