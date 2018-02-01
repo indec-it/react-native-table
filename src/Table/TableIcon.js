@@ -1,7 +1,7 @@
 /* eslint-disable react/no-typos */
 import React from 'react';
 import {Icon} from 'react-native-elements';
-import {getFontAwesome} from '@indec/react-native-commons';
+import {getFontAwesome} from '@indec/react-native-commons/util';
 
 import columnPropType from './columnPropType';
 import datumPropType from './datumPropType';
