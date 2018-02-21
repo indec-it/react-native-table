@@ -5,6 +5,8 @@ export default PropTypes.shape({
     id: PropTypes.number.isRequired,
     label: PropTypes.string.isRequired,
     field: PropTypes.string.isRequired,
+    showValue: PropTypes.func,
+    hideValue: PropTypes.func,
     componentClass: PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.instanceOf(Component)
