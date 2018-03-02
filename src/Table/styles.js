@@ -12,11 +12,11 @@ export default StyleSheet.create({
         alignItems: 'center'
     },
     tableHeader: {
+        marginTop: 30,
         flex: 0.05,
         flexDirection: 'row',
         alignItems: 'center',
         borderBottomWidth: 1,
-        borderBottomColor: '#b1b4b5',
-        marginTop: 20
+        borderBottomColor: '#b1b4b5'
     }
 });
