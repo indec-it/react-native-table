@@ -2,10 +2,12 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
     row: {
-        marginTop: 20
+        marginRight: 10,
+        marginLeft: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: '#dcddde'
     },
     col: {
-        paddingLeft: 20,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -14,6 +16,7 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         borderBottomWidth: 1,
-        borderBottomColor: '#b1b4b5'
+        borderBottomColor: '#b1b4b5',
+        marginTop: 20
     }
 });
