@@ -1,6 +1,11 @@
 import {Component} from 'react';
 import PropTypes from 'prop-types';
 
+const funcOrStringPropType = PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.string
+]);
+
 export default PropTypes.shape({
     id: PropTypes.number.isRequired,
     label: PropTypes.string.isRequired,
@@ -11,7 +16,7 @@ export default PropTypes.shape({
         PropTypes.func,
         PropTypes.instanceOf(Component)
     ]),
-    icon: PropTypes.string,
-    color: PropTypes.string,
+    icon: funcOrStringPropType,
+    color: funcOrStringPropType,
     style: PropTypes.shape({})
 });
