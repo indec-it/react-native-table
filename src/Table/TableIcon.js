@@ -15,7 +15,7 @@ const TableIcon = ({column, datum}) => (
             isFunction(column.icon) ? column.icon(datum) : column.icon,
             isFunction(column.color) ? column.color(datum) : column.color
         )}
-        onPress={() => column.onPress(datum)}
+        onPress={isFunction(column.onPress) ? (() => column.onPress(datum)) : undefined}
     />
 );
 

@@ -10,6 +10,7 @@ export default PropTypes.shape({
     id: PropTypes.number.isRequired,
     label: PropTypes.string.isRequired,
     field: PropTypes.string.isRequired,
+    onPress: PropTypes.func,
     showValue: PropTypes.func,
     hideValue: PropTypes.func,
     componentClass: PropTypes.oneOfType([
