@@ -22,5 +22,8 @@ export default StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#b1b4b5',
         backgroundColor: '#dee2e3'
+    },
+    rowEven: {
+        backgroundColor: '#f4f4f4'
     }
 });
