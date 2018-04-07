@@ -2,8 +2,8 @@
 import React from 'react';
 import {CheckBox} from 'react-native-elements';
 
-import columnPropType from './columnPropType';
-import datumPropType from './datumPropType';
+import columnPropType from '../util/columnPropType';
+import datumPropType from '../util/datumPropType';
 
 const TableCheckBox = ({column, datum}) => (
     <CheckBox

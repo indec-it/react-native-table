@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {View} from 'react-native';
 import {Col, TextStrong} from '@indec/react-native-commons';
 
-import columnPropType from './columnPropType';
+import columnPropType from '../util/columnPropType';
 import styles from './styles';
 
 const TableHeader = ({columns}) => (

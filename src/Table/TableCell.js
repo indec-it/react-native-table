@@ -3,8 +3,8 @@ import {Text} from 'react-native';
 import {Col} from '@indec/react-native-commons';
 import {at, isFunction} from 'lodash';
 
-import columnPropType from './columnPropType';
-import datumPropType from './datumPropType';
+import columnPropType from '../util/columnPropType';
+import datumPropType from '../util/datumPropType';
 import styles from './styles';
 
 const TableCell = ({datum, column}) => {

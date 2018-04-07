@@ -4,8 +4,8 @@ import {ScrollView} from 'react-native';
 import {isEmpty} from 'lodash';
 import {Col, Row} from '@indec/react-native-commons';
 
-import columnPropType from './columnPropType';
-import datumPropType from './datumPropType';
+import columnPropType from '../util/columnPropType';
+import datumPropType from '../util/datumPropType';
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';
 
