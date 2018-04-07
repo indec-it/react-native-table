@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Row} from '@indec/react-native-commons';
 
-import columnPropType from './columnPropType';
+import columnPropType from '../util/columnPropType';
 import TableCell from './TableCell';
-import datumPropType from './datumPropType';
+import datumPropType from '../util/datumPropType';
 import styles from './styles';
 
 const TableRow = ({datum, columns}) => (
