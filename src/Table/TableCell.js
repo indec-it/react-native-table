@@ -23,7 +23,7 @@ const TableCell = ({datum, column}) => {
     ) : (
         <Col style={[styles.col, column.style]}>
             <Text style={styles.text}>
-                {at(datum, column.field)}
+                {isFunction(column.field) ? column.field(datum) : at(datum, column.field)}
             </Text>
         </Col>
     );

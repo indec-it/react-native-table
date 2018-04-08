@@ -9,7 +9,10 @@ const funcOrStringPropType = PropTypes.oneOfType([
 export default PropTypes.shape({
     id: PropTypes.number.isRequired,
     label: PropTypes.string.isRequired,
-    field: PropTypes.string.isRequired,
+    field: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.func
+    ]).isRequired,
     onPress: PropTypes.func,
     showValue: PropTypes.func,
     hideValue: PropTypes.func,
