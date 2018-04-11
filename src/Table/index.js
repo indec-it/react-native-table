@@ -9,13 +9,13 @@ import datumPropType from '../util/datumPropType';
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';
 
-const Table = ({data, columns}) => (
+const Table = ({data, columns, striped}) => (
     <Col>
         <TableHeader columns={columns}/>
         <Row>
             <ScrollView>
-                {!isEmpty(data) && data.map(datum => (
-                    <TableRow key={datum._id} datum={datum} columns={columns}/>
+                {!isEmpty(data) && data.map((datum, index) => (
+                    <TableRow key={datum._id} striped={striped} rowIndex={index} datum={datum} columns={columns}/>
                 ))}
             </ScrollView>
         </Row>
@@ -23,8 +23,13 @@ const Table = ({data, columns}) => (
 );
 
 Table.propTypes = {
+    data: PropTypes.arrayOf(datumPropType).isRequired,
     columns: PropTypes.arrayOf(columnPropType).isRequired,
-    data: PropTypes.arrayOf(datumPropType).isRequired
+    striped: PropTypes.bool
+};
+
+Table.defaultProps = {
+    striped: false
 };
 
 export default Table;
