@@ -16,6 +16,7 @@ export default PropTypes.shape({
     onPress: PropTypes.func,
     showValue: PropTypes.func,
     hideValue: PropTypes.func,
+    order: PropTypes.bool,
     componentClass: PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.instanceOf(Component)
