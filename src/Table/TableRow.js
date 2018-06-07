@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Row} from '@indec/react-native-commons';
-import {mergeStyles} from '@indec/react-native-commons/util';
+import {composeStyles, stylePropType} from '@indec/react-native-commons/util';
 
 import columnPropType from '../util/columnPropType';
 import TableCell from './TableCell';
@@ -12,11 +12,11 @@ import styles from './styles';
 const hasAccentStyle = (rowIndex, striped) => striped && rowIndex % 2 === 0;
 
 const TableRow = ({
-    datum, columns, rowIndex, striped
+    datum, columns, rowIndex, striped, style
 }) => (
     <Row
         key={datum._id}
-        style={mergeStyles(styles.row, hasAccentStyle(rowIndex, striped) && styles.rowEven)}
+        style={composeStyles(styles.row, style, hasAccentStyle(rowIndex, striped) && styles.rowEven)}
         size={0.1}
     >
         {columns.map(column => (
@@ -29,11 +29,13 @@ TableRow.propTypes = {
     rowIndex: PropTypes.number.isRequired,
     datum: datumPropType.isRequired,
     columns: PropTypes.arrayOf(columnPropType).isRequired,
-    striped: PropTypes.bool
+    striped: PropTypes.bool,
+    style: stylePropType
 };
 
 TableRow.defaultProps = {
-    striped: false
+    striped: false,
+    style: null
 };
 
 export default TableRow;
