@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text} from 'react-native';
 import {Col} from '@indec/react-native-commons';
+import {composeStyles} from '@indec/react-native-commons/util';
 import {at, isFunction} from 'lodash';
 
 import columnPropType from '../util/columnPropType';
@@ -21,7 +22,7 @@ const TableCell = ({datum, column}) => {
             <Comp column={column} datum={datum}/>
         </Col>
     ) : (
-        <Col style={[styles.col, column.style]}>
+        <Col style={composeStyles(styles.col, column.style)}>
             <Text style={styles.text}>
                 {isFunction(column.field) ? column.field(datum) : at(datum, column.field)}
             </Text>
