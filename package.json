@@ -1,6 +1,6 @@
 {
   "name": "@indec/react-native-table",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A Table component for react-native apps",
   "private": false,
   "main": "src/index.js",
