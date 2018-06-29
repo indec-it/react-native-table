@@ -11,7 +11,9 @@ const TableHeader = ({columns}) => (
     <View style={styles.tableHeader}>
         {columns.map(column => (
             <Col key={column.id} style={composeStyles(styles.col, column.style)}>
-                <TextStrong style={styles.header}>{column.label}</TextStrong>
+                <TextStrong style={styles.header}>
+                    {column.label}
+                </TextStrong>
             </Col>
         ))}
     </View>
