@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import {Row} from '@indec/react-native-commons';
 import {composeStyles, stylePropType} from '@indec/react-native-commons/util';
 
-import columnPropType from '../util/columnPropType';
+import columnPropTypes from '../util/columnPropTypes';
+import datumPropTypes from '../util/datumPropTypes';
+
 import TableCell from './TableCell';
-import datumPropType from '../util/datumPropType';
 import styles from './styles';
 
 const hasAccentStyle = (rowIndex, striped) => striped && rowIndex % 2 === 0;
@@ -27,8 +28,8 @@ const TableRow = ({
 
 TableRow.propTypes = {
     rowIndex: PropTypes.number.isRequired,
-    datum: datumPropType.isRequired,
-    columns: PropTypes.arrayOf(columnPropType).isRequired,
+    datum: datumPropTypes.isRequired,
+    columns: PropTypes.arrayOf(columnPropTypes).isRequired,
     striped: PropTypes.bool,
     style: stylePropType
 };

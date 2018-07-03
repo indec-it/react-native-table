@@ -4,8 +4,9 @@ import {ScrollView} from 'react-native';
 import {isEmpty} from 'lodash';
 import {Col, Row} from '@indec/react-native-commons';
 
-import columnPropType from '../util/columnPropType';
-import datumPropType from '../util/datumPropType';
+import columnPropTypes from '../util/columnPropTypes';
+import datumPropTypes from '../util/datumPropTypes';
+
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';
 
@@ -23,8 +24,8 @@ const Table = ({data, columns, striped}) => (
 );
 
 Table.propTypes = {
-    data: PropTypes.arrayOf(datumPropType).isRequired,
-    columns: PropTypes.arrayOf(columnPropType).isRequired,
+    data: PropTypes.arrayOf(datumPropTypes).isRequired,
+    columns: PropTypes.arrayOf(columnPropTypes).isRequired,
     striped: PropTypes.bool
 };
 

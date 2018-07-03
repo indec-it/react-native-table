@@ -4,7 +4,8 @@ import {View} from 'react-native';
 import {Col, TextStrong} from '@indec/react-native-commons';
 import {composeStyles} from '@indec/react-native-commons/util';
 
-import columnPropType from '../util/columnPropType';
+import columnPropTypes from '../util/columnPropTypes';
+
 import styles from './styles';
 
 const TableHeader = ({columns}) => (
@@ -20,7 +21,7 @@ const TableHeader = ({columns}) => (
 );
 
 TableHeader.propTypes = {
-    columns: PropTypes.arrayOf(columnPropType).isRequired
+    columns: PropTypes.arrayOf(columnPropTypes).isRequired
 };
 
 export default TableHeader;

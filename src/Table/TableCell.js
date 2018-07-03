@@ -4,8 +4,9 @@ import {Col} from '@indec/react-native-commons';
 import {composeStyles} from '@indec/react-native-commons/util';
 import {at, isFunction} from 'lodash';
 
-import columnPropType from '../util/columnPropType';
-import datumPropType from '../util/datumPropType';
+import columnPropTypes from '../util/columnPropTypes';
+import datumPropTypes from '../util/datumPropTypes';
+
 import styles from './styles';
 
 const TableCell = ({datum, column}) => {
@@ -31,8 +32,8 @@ const TableCell = ({datum, column}) => {
 };
 
 TableCell.propTypes = {
-    datum: datumPropType.isRequired,
-    column: columnPropType.isRequired
+    datum: datumPropTypes.isRequired,
+    column: columnPropTypes.isRequired
 };
 
 export default TableCell;
