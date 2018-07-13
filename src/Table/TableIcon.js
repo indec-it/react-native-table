@@ -4,8 +4,8 @@ import {Icon} from 'react-native-elements';
 import {getFontAwesome} from '@indec/react-native-commons/util';
 import {isFunction} from 'lodash';
 
-import columnPropType from '../util/columnPropType';
-import datumPropType from '../util/datumPropType';
+import columnPropTypes from '../util/columnPropTypes';
+import datumPropTypes from '../util/datumPropTypes';
 
 const TableIcon = ({column, datum}) => (
     <Icon
@@ -20,8 +20,8 @@ const TableIcon = ({column, datum}) => (
 );
 
 TableIcon.propTypes = {
-    column: columnPropType.isRequired,
-    datum: datumPropType.isRequired
+    column: columnPropTypes.isRequired,
+    datum: datumPropTypes.isRequired
 };
 
 export default TableIcon;

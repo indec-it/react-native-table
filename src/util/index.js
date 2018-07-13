@@ -1,5 +1,5 @@
-import columnPropType from './columnPropType';
-import datumPropType from './datumPropType';
+import columnPropTypes from './columnPropTypes';
+import datumPropTypes from './datumPropTypes';
 
-export {columnPropType};
-export {datumPropType};
+export {columnPropTypes};
+export {datumPropTypes};
