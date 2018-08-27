@@ -24,12 +24,13 @@ const Table = ({data, columns, striped}) => (
 );
 
 Table.propTypes = {
-    data: PropTypes.arrayOf(datumPropTypes).isRequired,
     columns: PropTypes.arrayOf(columnPropTypes).isRequired,
+    data: PropTypes.arrayOf(datumPropTypes),
     striped: PropTypes.bool
 };
 
 Table.defaultProps = {
+    data: [],
     striped: false
 };
 
