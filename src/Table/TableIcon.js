@@ -9,11 +9,12 @@ import datumPropTypes from '../util/datumPropTypes';
 
 const TableIcon = ({column, datum}) => (
     <Icon
-        containerStyle={column.style}
+        reverse
         raised
         {...getFontAwesome(
             isFunction(column.icon) ? column.icon(datum) : column.icon,
-            isFunction(column.color) ? column.color(datum) : column.color
+            isFunction(column.color) ? column.color(datum) : column.color,
+            column.size
         )}
         onPress={isFunction(column.onPress) ? (() => column.onPress(datum)) : undefined}
     />
